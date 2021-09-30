@@ -1,10 +1,27 @@
-var initPrice=document.querySelector("#initial-price");
-var curPrice=document.querySelector("#current-price");
-var quant=document.querySelector("#quantity");
+var p1 = document.querySelector("#initial-price");
+var q1 = document.querySelector("#quantity");
+var p2 = document.querySelector("#current-price");
+var btnCalc = document.querySelector("#btn-calc");
 
-var calc=document.querySelector("#calc");
-
-calc.addEventListener("click", function calculate(){
-   
-
-})
+btnCalc.addEventListener("click", function calculate() {
+  if (p1.value * q1.value > p2.value * q1.value) {
+    var li = p1.value * q1.value;
+    var lc = p2.value * q1.value;
+    var l = li - lc;
+    var loss = (l * 100) / li;
+    console.log("loss", loss);
+    document.getElementById("output").innerHTML = "LOSS " + loss + "%";
+  } else {
+    var pi = p1.value * q1.value;
+    var pc = p2.value * q1.value;
+    var p = pc - pi;
+    var profit = (p * 100) / pi;
+    console.log("profit", profit);
+    document.getElementById("output").innerHTML = "PROFIT " + profit + "%";
+  }
+  // console.log(p1.value * q1.value);
+  // console.log(p2.value);
+  // console.log(q1.value);
+  //console.log(p2);
+  //console.log(q1);
+});
