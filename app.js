@@ -15,7 +15,7 @@ btnCalc.addEventListener("click", function calculate() {
       var loss = (l * 100) / li;
       console.log("loss", loss);
       absVal.innerText = "Loss Amount : " + l;
-      document.getElementById("output").innerHTML = "LOSS :" + loss + "%";
+      document.getElementById("output").innerHTML = "LOSS PERCENTAGE :" + loss + "%";
     } else if (p1.value * q1.value < p2.value * q1.value) {
       var pi = p1.value * q1.value;
       var pc = p2.value * q1.value;
@@ -23,7 +23,7 @@ btnCalc.addEventListener("click", function calculate() {
       var profit = (p * 100) / pi;
       console.log("profit", profit);
       absVal.innerText = "Profit Amount : " + p;
-      document.getElementById("output").innerHTML = "PROFIT :" + profit + "%";
+      document.getElementById("output").innerHTML = "PROFIT PERCENTAGE :" + profit + "%";
     }
   }
   // console.log(p1.value * q1.value);
